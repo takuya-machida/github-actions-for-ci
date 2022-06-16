@@ -27,7 +27,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     strategy:
-      matrix:
+    needs: build
         os: [ubuntu-latest, windows-2016]
         node-version: [12.x, 14.x]
     steps:
